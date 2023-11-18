@@ -7,11 +7,14 @@ public class Veiculos {
 	
 	
 
-	public Veiculos(int ano, String nome, int idade, char sexo) {
+	public Veiculos(int ano, int qt, String nome, int idade, char sexo) {
 		super();
 		
 		this.ano = ano;
-		this.pessoa = new Pessoas(nome, idade, sexo);
+		
+		for(int i=0; i<qt; i++) {
+		this.pessoa = new Pessoas();
+		}
 	}
 
 
