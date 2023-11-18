@@ -1,21 +1,27 @@
 package prova_pratica_poo_2023;
 
+import javax.swing.JOptionPane;
+
 public class Pessoas {
 	private String nome;
 	private int idade;
-	private char sexo;
+	private String sexo;
 	
 	
 	
 
 
-	public Pessoas(String nome, int idade, char sexo) {
+	public Pessoas() {
+		setNome(JOptionPane.showInputDialog(null, "qual o nome da pessoa"));
+		setSexo(JOptionPane.showInputDialog(null, "qual o Sexo da pessoa"));
+		setIdade(Integer.parseInt(JOptionPane.showInputDialog(null, "qual a idade da pessoa")));
+	}
+	public Pessoas(String nome, int idade, String sexo) {
 		super();
 		this.nome = nome;
 		this.idade = idade;
 		this.sexo = sexo;
 	}
-
 
 
 	public String getNome() {
@@ -42,13 +48,13 @@ public class Pessoas {
 
 
 
-	public char getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
 
 
 
-	public void setSexo(char sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 
